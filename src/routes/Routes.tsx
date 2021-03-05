@@ -21,7 +21,7 @@ const Routes: React.FC<Props> = () => {
         <Route path="/products" exact>
           <Products />
         </Route>
-        <Route path="/products/:id">
+        <Route path="/products/:productId">
           <ProductDetail />
         </Route>
         <Route path="/buy">

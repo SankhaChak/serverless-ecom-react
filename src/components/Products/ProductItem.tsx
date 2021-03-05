@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Product } from "../../data/products";
 
 interface Props {
@@ -6,7 +7,7 @@ interface Props {
 
 const ProductItem: React.FC<Props> = ({ product }) => {
   return (
-    <div className="product">
+    <Link to={`/products/${product.id}`} className="product">
       <img
         src={product.imageUrl}
         alt={product.title}
@@ -18,7 +19,7 @@ const ProductItem: React.FC<Props> = ({ product }) => {
           {product.price.toFixed(2)}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 
