@@ -1,7 +1,8 @@
 import { BrowserRouter } from "react-router-dom";
-import "./App.css";
 import Layout from "./components/Layout/Layout";
 import Routes from "./routes/Routes";
+import "./App.css";
+import "./fontawesome";
 
 function App() {
   return (

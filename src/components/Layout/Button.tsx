@@ -1,4 +1,5 @@
 import { ButtonHTMLAttributes, forwardRef, Ref } from "react";
+import Spinner from "./Spinner";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   height?: string;
@@ -19,6 +20,10 @@ const Button = forwardRef(
       disabled,
       style,
       className,
+      spinnerColor,
+      spinnerHeight,
+      spinnerWidth,
+      ...props
     }: Props,
     ref: Ref<HTMLButtonElement>
   ) => {
@@ -28,13 +33,22 @@ const Button = forwardRef(
         className={`btn ${className}`}
         disabled={disabled}
         style={{
-          cursor: loading ? "not-allowed" : "pointer",
+          cursor: loading || disabled ? "not-allowed" : "pointer",
           height,
           width,
           ...style,
+          ...props,
         }}
       >
-        {children}
+        {loading ? (
+          <Spinner
+            color={spinnerColor}
+            height={spinnerHeight}
+            width={spinnerWidth}
+          />
+        ) : (
+          children
+        )}
       </button>
     );
   }
