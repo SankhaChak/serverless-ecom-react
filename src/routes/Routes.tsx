@@ -1,5 +1,5 @@
 import { Switch, Route } from "react-router-dom";
-import NavBar from "../components/Nav/NavBar";
+// import NavBar from "../components/Nav/NavBar";
 import Home from "../pages/Home";
 import PageNotFound from "../pages/PageNotFound";
 import ProductDetail from "../pages/ProductDetail";

@@ -1,3 +1,4 @@
+import Signup from "../Auth/Signup";
 import NavBar from "../Nav/NavBar";
 
 interface Props {}
@@ -7,6 +8,7 @@ const Layout: React.FC<Props> = ({ children }) => {
     <>
       <NavBar />
       <div className="page">{children}</div>
+      <Signup />
     </>
   );
 };

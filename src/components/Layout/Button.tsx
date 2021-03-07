@@ -37,8 +37,8 @@ const Button = forwardRef(
           height,
           width,
           ...style,
-          ...props,
         }}
+        {...props}
       >
         {loading ? (
           <Spinner
